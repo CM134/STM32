@@ -1,1 +1,2 @@
-All LEDs turn on after each other.
+Red LED blicking with 2Hz
+
