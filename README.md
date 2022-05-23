@@ -1,3 +1,2 @@
-See the attached pdf for information on the exercises. 
+Green LED blicking and counting up. Press black button to restart program.
 
-The branches are in the structure of the reports sections.
