@@ -1,2 +1,1 @@
-Green LED toggles in 1sec interval.
-
+All LEDs turn on after each other.

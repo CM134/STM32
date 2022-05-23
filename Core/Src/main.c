@@ -85,11 +85,13 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_TIM3_Init();
+  MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 
-  // Start Timer
-  HAL_TIM_Base_Start_IT(&htim3);
+  HAL_TIM_OC_Start(&htim4,TIM_CHANNEL_1);
+  HAL_TIM_OC_Start(&htim4,TIM_CHANNEL_2);
+  HAL_TIM_OC_Start(&htim4,TIM_CHANNEL_3);
+  HAL_TIM_OC_Start(&htim4,TIM_CHANNEL_4);
 
   /* USER CODE END 2 */
 
@@ -98,8 +100,8 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    /* USER CODE BEGIN 3 */
 
+    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
@@ -149,15 +151,7 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
 
-	// Check which version of the timer triggered this callback and toggle LED
-	if (htim == &htim3 )
-	{
-		HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-	}
-}
 /* USER CODE END 4 */
 
 /**
